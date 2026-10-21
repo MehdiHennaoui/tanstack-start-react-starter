@@ -12,6 +12,8 @@
 			"**/.vscode/**/*",
 			"**/index.html",
 			"**/vite.config.ts",
+			"**/vitest.config.ts",
+			"**/steiger.config.js",
 			"!**/src/app/routeTree.gen.ts",
 			"!**/src/app/styles.css"
 		]

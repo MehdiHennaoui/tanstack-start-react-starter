@@ -2,6 +2,14 @@ name: Deploy to GitHub Pages
 
 on:
   workflow_dispatch:
+    inputs:
+      branch:
+        description: >
+          Branch to deploy. Leave empty to use the branch chosen in
+          "Use workflow from" (that dropdown lists every branch in the repo).
+        required: false
+        type: string
+        default: ""
 
 permissions:
   contents: read
@@ -17,6 +25,8 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.branch || github.ref_name }}
       - uses: ./.github/actions/setup
       - run: pnpm test
 
@@ -24,6 +34,8 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.branch || github.ref_name }}
       - uses: ./.github/actions/setup
       - run: pnpm exec playwright install --with-deps chromium
       - run: pnpm test:e2e
@@ -32,6 +44,8 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.branch || github.ref_name }}
       - uses: ./.github/actions/setup
       - run: pnpm lint
 
@@ -39,6 +53,8 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.branch || github.ref_name }}
       - uses: ./.github/actions/setup
       - run: pnpm lint:fsd
 
@@ -46,6 +62,8 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.branch || github.ref_name }}
       - uses: ./.github/actions/setup
       - run: pnpm build
       - uses: actions/upload-pages-artifact@v5

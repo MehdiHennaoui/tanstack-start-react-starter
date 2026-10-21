@@ -13,6 +13,7 @@
     "format": "biome format",
     "lint": "biome lint",
     "lint:fsd": "steiger ./src",
+    "lint:all": "pnpm check && pnpm lint:fsd",
     "check": "biome check"
   },
   "dependencies": {

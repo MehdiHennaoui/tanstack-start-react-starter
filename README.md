@@ -40,6 +40,7 @@ React full-stack starter based on [TanStack Start](https://tanstack.com/start), 
 ### Architecture
 
 - [Feature-Sliced Design](https://fsd.how/)
+- [@feature-sliced/cli](https://github.com/feature-sliced/cli)
 
 ### Quality & tests
 
@@ -66,6 +67,7 @@ App runs at [http://localhost:3000](http://localhost:3000).
 | `pnpm check` | Biome lint + format |
 | `pnpm lint:fsd` | FSD lint (Steiger) |
 | `pnpm lint:all` | Biome + Steiger |
+| `pnpm fsd` | Scaffold FSD layers/slices ([CLI](https://github.com/feature-sliced/cli)) |
 | `pnpm test` | Unit tests (Vitest) |
 | `pnpm test:e2e` | E2E tests (Playwright) |
 

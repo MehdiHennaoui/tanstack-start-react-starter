@@ -13,7 +13,9 @@
 			"**/index.html",
 			"**/vite.config.ts",
 			"**/vitest.config.ts",
+			"**/playwright.config.ts",
 			"**/steiger.config.js",
+			"**/e2e/**/*",
 			"!**/src/app/routeTree.gen.ts",
 			"!**/src/app/styles.css"
 		]

@@ -16,7 +16,8 @@
     "lint:all": "pnpm check && pnpm lint:fsd",
     "check": "biome check",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",
@@ -38,6 +39,7 @@
   "devDependencies": {
     "@biomejs/biome": "2.4.5",
     "@feature-sliced/steiger-plugin": "^0.8.0",
+    "@playwright/test": "^1.64.1",
     "@tanstack/devtools-vite": "0.8.5",
     "@tanstack/router-cli": "^1.132.0",
     "@types/node": "^22.10.2",

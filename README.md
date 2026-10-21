@@ -1,9 +1,23 @@
-# TanStack Start + FSD
+# tanstack-start-react-starter
 
-React full-stack starter based on [TanStack Start](https://tanstack.com/start), organized with [Feature-Sliced Design](https://fsd.how/).
+GitHub template to bootstrap full-stack React apps with [TanStack Start](https://tanstack.com/start), typed routing, and [Feature-Sliced Design](https://fsd.how/).
+
+## Purpose
+
+This repo is a **starter template**, not a product app. Clone or use it as a GitHub template when you want a ready-made baseline instead of wiring the stack from scratch.
+
+It aims to give you:
+
+- A working TanStack Start + React + Vite + TypeScript app out of the box
+- An FSD-oriented `src/` layout (`app` / `pages` / `shared`) with scaffolding via `pnpm fsd`
+- UI primitives (Tailwind, shadcn/ui, Base UI) without shipping demo business features
+- Quality gates from day one: Biome, Steiger (FSD lint), Vitest, and Playwright
+
+Use it as the foundation for a new project, then grow features inside the FSD layers.
 
 ## Table of contents
 
+- [Purpose](#purpose)
 - [Stack](#stack)
   - [Framework & routing](#framework--routing)
   - [Builder & language](#builder--language)

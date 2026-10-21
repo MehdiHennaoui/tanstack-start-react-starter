@@ -1,6 +1,6 @@
 {
   "bundler": "vite",
-  "projectName": "tanstack-starter-react",
+  "projectName": "tanstack-start-react-starter",
   "mode": "file-router",
   "typescript": true,
   "packageManager": "pnpm",

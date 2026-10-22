@@ -20,9 +20,12 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+env:
+  RUNNER: &runner ubuntu-24.04
+
 jobs:
   test:
-    runs-on: ubuntu-24.04
+    runs-on: *runner
     steps:
       - uses: actions/checkout@v7
         with:
@@ -31,7 +34,7 @@ jobs:
       - run: pnpm test
 
   e2e:
-    runs-on: ubuntu-24.04
+    runs-on: *runner
     steps:
       - uses: actions/checkout@v7
         with:
@@ -41,7 +44,7 @@ jobs:
       - run: pnpm test:e2e
 
   lint:
-    runs-on: ubuntu-24.04
+    runs-on: *runner
     steps:
       - uses: actions/checkout@v7
         with:
@@ -50,7 +53,7 @@ jobs:
       - run: pnpm lint
 
   lint-fsd:
-    runs-on: ubuntu-24.04
+    runs-on: *runner
     steps:
       - uses: actions/checkout@v7
         with:
@@ -59,7 +62,7 @@ jobs:
       - run: pnpm lint:fsd
 
   build:
-    runs-on: ubuntu-24.04
+    runs-on: *runner
     steps:
       - uses: actions/checkout@v7
         with:
@@ -72,7 +75,7 @@ jobs:
 
   deploy:
     needs: [test, e2e, lint, lint-fsd, build]
-    runs-on: ubuntu-24.04
+    runs-on: *runner
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

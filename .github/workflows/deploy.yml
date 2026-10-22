@@ -71,7 +71,7 @@ jobs:
           path: dist
 
   deploy:
-    needs: [test, e2e, lint, build]
+    needs: [test, e2e, lint, lint-fsd, build]
     runs-on: ubuntu-24.04
     environment:
       name: github-pages

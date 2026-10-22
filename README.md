@@ -78,9 +78,10 @@ App runs at [http://localhost:3000](http://localhost:3000).
 | --- | --- |
 | `pnpm dev` | Dev server |
 | `pnpm build` | Production build |
-| `pnpm check` | Biome lint + format |
+| `pnpm check` | Biome lint + format (report only, no writes) |
+| `pnpm check:fix` | Biome lint + format, apply safe fixes |
 | `pnpm lint:fsd` | FSD lint (Steiger) |
-| `pnpm lint:all` | Biome + Steiger |
+| `pnpm lint:all` | `check:fix` + Steiger |
 | `pnpm fsd` | Scaffold FSD layers/slices ([CLI](https://github.com/feature-sliced/cli)) |
 | `pnpm test` | Unit tests (Vitest) |
 | `pnpm test:e2e` | E2E tests (Playwright) |

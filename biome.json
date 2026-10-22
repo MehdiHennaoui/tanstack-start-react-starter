@@ -32,6 +32,15 @@
 				"noUnusedImports": {
 					"level": "error",
 					"fix": "safe"
+				},
+				"noUnusedVariables": {
+					"level": "error"
+				},
+				"noUnusedFunctionParameters": {
+					"level": "error"
+				},
+				"noUnusedPrivateClassMembers": {
+					"level": "error"
 				}
 			},
 			"nursery": {

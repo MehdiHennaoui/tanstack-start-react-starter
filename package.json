@@ -13,9 +13,10 @@
     "format": "biome format",
     "lint": "biome lint",
     "lint:fsd": "steiger ./src",
-    "lint:all": "pnpm check && pnpm lint:fsd",
+    "lint:all": "pnpm check:fix && pnpm lint:fsd",
     "fsd": "fsd",
     "check": "biome check",
+    "check:fix": "biome check --write",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test"

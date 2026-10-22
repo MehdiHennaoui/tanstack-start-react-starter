@@ -9,3 +9,11 @@ Before editing files for a substantial task:
 - Monorepos: when working across packages, run the skill check from the workspace root and prefer the local skill for the package being changed.
 - Multiple matches: prefer the most specific local skill for the package or concern you are changing; load additional skills only when the task spans multiple packages or concerns.
 <!-- intent-skills:end -->
+
+## Project rules (always apply)
+
+These rules apply on every task, for any agent. Source of truth: `.agents/rules/`. Read each file and follow it.
+
+- [English only](.agents/rules/english-only.md)
+- [FSD CLI scaffolding](.agents/rules/fsd-cli.md)
+- [Lint after edits](.agents/rules/lint-after-edits.md)
